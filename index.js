@@ -13,8 +13,8 @@ const tg = document.forms["frm1"]["tg"].value;
 
   console.log(age);
 
-  let prediction =  model.predict(tf.tensor2d([[age, ldl, hdl]]));
-  prediction.print();
+  /*let prediction =  model.predict(tf.tensor2d([[age, ldl, hdl]]));
+  prediction.print();*/
 
 })();
 
