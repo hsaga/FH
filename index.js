@@ -16,14 +16,12 @@ document.getElementById("LDL").innerHTML = ldl;
 (async () => {
   const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
 
-  console.log(typeof age);
-  console.log(model);
-
   let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
   console.log(typeof prediction);
+  console.log(typeof Number(prediction));
   
-  document.getElementById("NNprediction").innerHTML = Number(Number(prediction));
+  document.getElementById("NNprediction").innerHTML = Number(prediction);
 
 })();
 
