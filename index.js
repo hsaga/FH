@@ -15,7 +15,7 @@ console.log(age);
 
 
 
-
+/*
 (async () => {
   const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
 
@@ -24,7 +24,7 @@ console.log(age);
   let prediction =  model.predict(tf.tensor2d([[age, ldl, hdl]]));
   prediction.print();
 
-})();
+})();*/
 
 
 
