@@ -1,10 +1,11 @@
 
-  const age = document.forms["frm1"]["age"].value;
-  const ldl = document.forms["frm1"]["ldl"].value;
-  const hdl = document.forms["frm1"]["hdl"].value;
-  const tg = document.forms["frm1"]["tg"].value;
+const age = document.forms["frm1"]["age"].value;
+const ldl = document.forms["frm1"]["ldl"].value;
+const hdl = document.forms["frm1"]["hdl"].value;
+const tg = document.forms["frm1"]["tg"].value;
 
-  document.write(age);
+// update variable text
+age.innerHTML = "this is age";
 
 
 (async () => {
