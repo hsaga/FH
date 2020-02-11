@@ -11,7 +11,7 @@ const tg = document.forms["frm1"]["tg"].value;
 (async () => {
   const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
 
-  console.log(age);
+  console.log(typeof age);
 
   /*let prediction =  model.predict(tf.tensor2d([[age, ldl, hdl]]));
   prediction.print();*/
