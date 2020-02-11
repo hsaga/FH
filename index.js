@@ -6,7 +6,10 @@ const ldl = Number(document.forms["frm1"]["ldl"].value);
 const hdl = Number(document.forms["frm1"]["hdl"].value);
 const tg = Number(document.forms["frm1"]["tg"].value);
 
-document.getElementById("variables").innerHTML = age;
+console.log(age, typeof(age));
+
+document.getElementById("Age").innerHTML = age;
+document.getElementById("LDL").innerHTML = ldl;
 
 (async () => {
   const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
