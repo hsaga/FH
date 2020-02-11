@@ -18,8 +18,10 @@ document.getElementById("LDL").innerHTML = ldl;
   console.log(model);
 
   let prediction =  model.predict(tf.tensor2d([[age, ldl, hdl]]));
+
+  console.log(typeof prediction);
   
-  document.getElementById("NNprediction").innerHTML = prediction;
+  document.getElementById("NNprediction").innerHTML = Number(prediction);
 
 })();
 
