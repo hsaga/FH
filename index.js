@@ -22,6 +22,7 @@ document.getElementById("LDL").innerHTML = ldl;
   console.log(Number(prediction));
   console.log(prediction[0]);
   console.log(prediction[1]);
+  console.log(prediction[0][0]);
   
   document.getElementById("NNprediction").innerHTML = Number(prediction);
 
