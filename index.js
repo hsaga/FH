@@ -11,9 +11,6 @@ console.log(age);
 // update variable text
 //age.innerHTML = "this is age";
 
-}
-
-
 
 
 (async () => {
@@ -25,6 +22,8 @@ console.log(age);
   prediction.print();
 
 })();
+
+}
 
 
 
