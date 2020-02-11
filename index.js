@@ -6,7 +6,9 @@ const ldl = Number(document.forms["frm1"]["ldl"].value);
 const hdl = Number(document.forms["frm1"]["hdl"].value);
 const tg = Number(document.forms["frm1"]["tg"].value);
 
-console.log(age, typeof(age));
+const var1 = hdl;
+const var2 = ldl/age;
+const var3 = tg/ldl;
 
 document.getElementById("Age").innerHTML = age;
 document.getElementById("LDL").innerHTML = ldl;
@@ -17,11 +19,11 @@ document.getElementById("LDL").innerHTML = ldl;
   console.log(typeof age);
   console.log(model);
 
-  let prediction =  model.predict(tf.tensor2d([[age, ldl, hdl]]));
+  let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
   console.log(typeof prediction);
   
-  document.getElementById("NNprediction").innerHTML = Number(prediction);
+  document.getElementById("NNprediction").innerHTML = Number(Number(prediction));
 
 })();
 
