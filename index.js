@@ -15,7 +15,8 @@ document.getElementById("variables").innerHTML = age;
   console.log(model);
 
   let prediction =  model.predict(tf.tensor2d([[age, ldl, hdl]]));
-  prediction.print();
+  
+  document.getElementById("NNprediction").innerHTML = prediction;
 
 })();
 
