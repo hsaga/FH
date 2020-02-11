@@ -9,7 +9,7 @@ const tg = document.forms["frm1"]["tg"].value;
 console.log(age);
 
 // update variable text
-//age.innerHTML = "this is age";
+age.innerHTML = "this is age";
 
 
 
