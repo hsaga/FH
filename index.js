@@ -1,15 +1,10 @@
 
 
 function makePrediction(){
-var age = document.forms["frm1"]["age"].value;
-var ldl = document.forms["frm1"]["ldl"].value;
-var hdl = document.forms["frm1"]["hdl"].value;
-var tg = document.forms["frm1"]["tg"].value;
-
-const age = Number(age);
-const ldl = Number(ldl);
-const hdl = Number(hdl);
-const tg = Number(tg);
+const age = Number(document.forms["frm1"]["age"].value);
+const ldl = Number(document.forms["frm1"]["ldl"].value);
+const hdl = Number(document.forms["frm1"]["hdl"].value);
+const tg = Number(document.forms["frm1"]["tg"].value);
 
 document.getElementById("variables").innerHTML = age;
 
