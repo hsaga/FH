@@ -18,13 +18,8 @@ document.getElementById("LDL").innerHTML = ldl;
 
   let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
-  console.log(typeof prediction);
-  console.log(Number(prediction));
-  console.log(prediction[0]);
-  console.log(prediction[1]);
-  console.log(prediction[0][0]);
   
-  document.getElementById("NNprediction").innerHTML = Number(prediction);
+  document.getElementById("NNprediction").innerHTML = prediction;
 
 })();
 
