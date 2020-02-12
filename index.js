@@ -18,6 +18,9 @@ document.getElementById("LDL").innerHTML = ldl;
 
   let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
+  console.log(prediction);
+  console.log(typeof prediction);
+
   
   document.getElementById("NNprediction").innerHTML = prediction;
 
