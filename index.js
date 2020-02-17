@@ -10,10 +10,11 @@ const var1 = hdl;
 const var2 = ldl/age;
 const var3 = tg/ldl;
 
+/*
 document.getElementById("Age").innerHTML = age;
 document.getElementById("LDL").innerHTML = ldl;
 document.getElementById("HDL").innerHTML = hdl;
-document.getElementById("TG").innerHTML = tg;
+document.getElementById("TG").innerHTML = tg;*/
 
 (async () => {
   const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
