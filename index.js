@@ -12,6 +12,8 @@ const var3 = tg/ldl;
 
 document.getElementById("Age").innerHTML = age;
 document.getElementById("LDL").innerHTML = ldl;
+document.getElementById("HDL").innerHTML = hdl;
+document.getElementById("TG").innerHTML = tg;
 
 (async () => {
   const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
@@ -19,10 +21,11 @@ document.getElementById("LDL").innerHTML = ldl;
   let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
   console.log(prediction);
+  console.log(prediction[0]);
   console.log(typeof prediction);
 
   
-  document.getElementById("NNprediction").innerHTML = prediction;
+  document.getElementById("NNprediction").innerHTML = prediction[0];
 
 })();
 
