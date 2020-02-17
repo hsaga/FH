@@ -28,7 +28,7 @@ document.getElementById("TG").innerHTML = tg;
   console.log(predictionArray);
 
   
-  document.getElementById("NNprediction").innerHTML = prediction;
+  document.getElementById("NNprediction").innerHTML = predictionArray[0][0];
 
 })();
 
