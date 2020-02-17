@@ -24,11 +24,42 @@ document.getElementById("TG").innerHTML = tg;
 
   predictionArray = prediction.arraySync();
 
-  console.log(prediction);
-  console.log(predictionArray);
 
-  
   document.getElementById("NNprediction").innerHTML = predictionArray[0][0];
+
+
+  // CT
+
+const x = 1;
+const y = 1;
+const z = 1;
+
+  if (var2 < x) 
+  {
+    if (var3 > y) 
+    {
+      CTprediction = 0;
+    }
+    else if (var1 > z)
+    {
+      CTprediction = 0;
+    }
+    else 
+    {
+      CTprediction = 1;
+    }
+  } 
+
+  else if (var3 > y) 
+  {
+    CTprediction = 0;
+  }
+  
+  else
+  {
+    CTprediction = 1;
+  }
+
 
 })();
 
