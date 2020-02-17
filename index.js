@@ -76,6 +76,7 @@ function makePrediction(){
 
 }
 
+/*
 function sendEmail() {
 	Email.send({
 	Host: "smtp.gmail.com",
@@ -87,8 +88,9 @@ function sendEmail() {
 	Body : "<email body>",
 	}).then(
 		message => alert("mail sent successfully")
-	);
+  );
 }
+*/
 
 
 
