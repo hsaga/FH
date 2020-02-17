@@ -14,15 +14,18 @@ const var3 = tg/ldl;
 document.getElementById("Age").innerHTML = age;
 document.getElementById("LDL").innerHTML = ldl;
 document.getElementById("HDL").innerHTML = hdl;
-document.getElementById("TG").innerHTML = tg;*/
+document.getElementById("TG").innerHTML = tg;
+*/
 
 (async () => {
   const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
 
   let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
+  predictionArray = prediction.arraySync();
+
   console.log(prediction);
-  console.log(typeof prediction);
+  console.log(predictionArray);
 
   
   document.getElementById("NNprediction").innerHTML = prediction;
