@@ -14,6 +14,9 @@ function makePrediction(){
   const ldl = Number(document.forms["frm1"]["ldl"].value);
   const hdl = Number(document.forms["frm1"]["hdl"].value);
   const tg = Number(document.forms["frm1"]["tg"].value);
+  const yourPrediction = Number(document.forms["frm1"]["yourPrediction"].value);
+
+  console.log(yourPrediction);
 
   // Construct the variables and normalize
   const var1 = (hdl - meanVar1) / stdVar1;
