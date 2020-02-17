@@ -30,9 +30,9 @@ document.getElementById("TG").innerHTML = tg;
 
   // CT
 
-const x = 1;
-const y = 1;
-const z = 1;
+  const x = 1;
+  const y = 1;
+  const z = 1;
 
   if (var2 < x) 
   {
@@ -54,11 +54,14 @@ const z = 1;
   {
     CTprediction = 0;
   }
-  
+
   else
   {
     CTprediction = 1;
   }
+
+  document.getElementById("CTprediction").innerHTML = CTprediction;
+
 
 
 })();
