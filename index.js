@@ -1,72 +1,81 @@
 
+// Define the mean and std for gothenburg training set for normalization
+const meanVar1 = 1.51262097;
+const meanVar2 = 0.15645247;
+const meanVar2 = 0.24278265;
 
+const stdVar1 = 0.48458161;
+const stdVar2 = 0.07073377;
+const stdVar2 = 0.19097731;
+
+// Function that makes the predictions
 function makePrediction(){
-const age = Number(document.forms["frm1"]["age"].value);
-const ldl = Number(document.forms["frm1"]["ldl"].value);
-const hdl = Number(document.forms["frm1"]["hdl"].value);
-const tg = Number(document.forms["frm1"]["tg"].value);
+  const age = Number(document.forms["frm1"]["age"].value);
+  const ldl = Number(document.forms["frm1"]["ldl"].value);
+  const hdl = Number(document.forms["frm1"]["hdl"].value);
+  const tg = Number(document.forms["frm1"]["tg"].value);
 
-const var1 = hdl;
-const var2 = ldl/age;
-const var3 = tg/ldl;
+  // Construct the variables and normalize
+  const var1 = (hdl - meanVar1) / stdVar1;
+  const var2 = (ldl/age  - meanVar2) / stdVar2;
+  const var3 = (tg/ldl  - meanVar3) / stdVar3;
 
-/*
-document.getElementById("Age").innerHTML = age;
-document.getElementById("LDL").innerHTML = ldl;
-document.getElementById("HDL").innerHTML = hdl;
-document.getElementById("TG").innerHTML = tg;
-*/
+  /*
+  document.getElementById("Age").innerHTML = age;
+  document.getElementById("LDL").innerHTML = ldl;
+  document.getElementById("HDL").innerHTML = hdl;
+  document.getElementById("TG").innerHTML = tg;
+  */
 
-(async () => {
-  const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
+  (async () => {
 
-  let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
+    // Neural network
+    const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
 
-  predictionArray = prediction.arraySync();
+    let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
+    predictionArray = prediction.arraySync();
 
-  document.getElementById("NNprediction").innerHTML = 'NN prediction' + predictionArray[0][0];
+    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + predictionArray[0][0];
 
+    // Classification tree
+    const x = 1;
+    const y = 1;
+    const z = 1;
 
-  // CT
+    let CTprediction = 0;
 
-  const x = 1;
-  const y = 1;
-  const z = 1;
+    if (var2 < x) 
+    {
+      if (var3 > y) 
+      {
+        CTprediction = 0;
+      }
+      else if (var1 > z)
+      {
+        CTprediction = 0;
+      }
+      else 
+      {
+        CTprediction = 1;
+      }
+    } 
 
-  let CTprediction = 0;
-
-  if (var2 < x) 
-  {
-    if (var3 > y) 
+    else if (var3 > y) 
     {
       CTprediction = 0;
     }
-    else if (var1 > z)
-    {
-      CTprediction = 0;
-    }
-    else 
+
+    else
     {
       CTprediction = 1;
     }
-  } 
 
-  else if (var3 > y) 
-  {
-    CTprediction = 0;
-  }
-
-  else
-  {
-    CTprediction = 1;
-  }
-
-  document.getElementById("CTprediction").innerHTML = 'CT prediction' + CTprediction;
+    document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: ' + CTprediction;
 
 
 
-})();
+  })();
 
 }
 
