@@ -2,11 +2,11 @@
 // Define the mean and std for gothenburg training set for normalization
 const meanVar1 = 1.51262097;
 const meanVar2 = 0.15645247;
-const meanVar2 = 0.24278265;
+const meanVar3 = 0.24278265;
 
 const stdVar1 = 0.48458161;
 const stdVar2 = 0.07073377;
-const stdVar2 = 0.19097731;
+const stdVar3 = 0.19097731;
 
 // Function that makes the predictions
 function makePrediction(){
@@ -20,13 +20,7 @@ function makePrediction(){
   const var2 = (ldl/age  - meanVar2) / stdVar2;
   const var3 = (tg/ldl  - meanVar3) / stdVar3;
 
-  /*
-  document.getElementById("Age").innerHTML = age;
-  document.getElementById("LDL").innerHTML = ldl;
-  document.getElementById("HDL").innerHTML = hdl;
-  document.getElementById("TG").innerHTML = tg;
-  */
-
+  // Models and predictions
   (async () => {
 
     // Neural network
@@ -43,7 +37,7 @@ function makePrediction(){
     const y = 1;
     const z = 1;
 
-    let CTprediction = 0;
+    let CTprediction = undefined;
 
     if (var2 < x) 
     {
