@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     
     <title>FH predictor</title>
 </head>
@@ -27,12 +28,16 @@
     <input type="number" name="hdl"><br>
     TG:<br> 
     <input type="number" name="tg"><br><br>
-    
+
     Your prediction (0 or 1):<br> 
     <input type="number" name="doctorPrediction" min="0" max="1" step="1"><br><br>
     
     <input type="button" onclick="makePrediction()" value="Predict"> 
     </form>
+
+    <form method="post">
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
 
     <!--  
     <p Age: id="Age"></p>
@@ -46,6 +51,7 @@
     <p id="CTprediction"></p>
 
     <script src="index.js"></script>
+    
 
     <!--  
     <br>
