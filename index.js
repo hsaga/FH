@@ -34,6 +34,8 @@ document.getElementById("TG").innerHTML = tg;
   const y = 1;
   const z = 1;
 
+  let CTprediction = 0;
+
   if (var2 < x) 
   {
     if (var3 > y) 
