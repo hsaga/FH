@@ -22,11 +22,10 @@ document.getElementById("TG").innerHTML = tg;*/
   let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
   console.log(prediction);
-  console.log(prediction(0));
   console.log(typeof prediction);
 
   
-  document.getElementById("NNprediction").innerHTML = prediction(0);
+  document.getElementById("NNprediction").innerHTML = prediction;
 
 })();
 
