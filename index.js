@@ -25,7 +25,7 @@ document.getElementById("TG").innerHTML = tg;
   predictionArray = prediction.arraySync();
 
 
-  document.getElementById("NNprediction").innerHTML = predictionArray[0][0];
+  document.getElementById("NNprediction").innerHTML = 'NN prediction' + predictionArray[0][0];
 
 
   // CT
@@ -62,7 +62,7 @@ document.getElementById("TG").innerHTML = tg;
     CTprediction = 1;
   }
 
-  document.getElementById("CTprediction").innerHTML = CTprediction;
+  document.getElementById("CTprediction").innerHTML = 'CT prediction' + CTprediction;
 
 
 
