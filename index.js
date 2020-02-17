@@ -18,7 +18,7 @@ function makePrediction(){
 
   console.log(yourPrediction);
 
-  // Construct the variables and normalize
+  // Construct the variables and standardize
   const var1 = (hdl - meanVar1) / stdVar1;
   const var2 = (ldl/age  - meanVar2) / stdVar2;
   const var3 = (tg/ldl  - meanVar3) / stdVar3;
