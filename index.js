@@ -67,8 +67,12 @@ function makePrediction(){
     {
       CTprediction = 1;
     }
-
+    /*
     document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: ' + CTprediction;
+    */
+
+    document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: Not available';
+
 
 
 
