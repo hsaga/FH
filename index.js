@@ -55,7 +55,7 @@ function makePrediction(){
         showInLegend: false,
         yValueFormatString: " ",
         indexLabel: " ",
-        legendText: "Department wise Min and Max Salary",
+        legendText: " ",
         toolTipContent: "{y[1]}",
         dataPoints: [
           {y:[0, predictionArray[0][0].toFixed(2)]},
