@@ -66,7 +66,7 @@ function makePrediction(){
         lineThickness: 2
         
       }, 
-      dataPointWidth: 70,
+      dataPointWidth: 40,
       data: [{
         type: "bar",
         showInLegend: false,
