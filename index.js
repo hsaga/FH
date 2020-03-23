@@ -33,7 +33,7 @@ function makePrediction(){
 
     predictionArray = prediction.arraySync();
 
-    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + Math.round(predictionArray[0][0] * 1e2) / 1e2;
+    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
     // Chart 
     var chart = new CanvasJS.Chart("chartContainer", {
@@ -68,9 +68,9 @@ function makePrediction(){
         type: "bar",
         showInLegend: false,
         yValueFormatString: " ",
-        indexLabel: "{y}",
+        indexLabel: Math.round(predictionArray[0][0] * 1e2) / 1e2,
         legendText: " ",
-        toolTipContent: "{y}",
+        toolTipContent: " ",
         dataPoints: [
           {x: 0.5, y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
         ]
