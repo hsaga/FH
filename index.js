@@ -56,9 +56,9 @@ function makePrediction(){
       axisY: {
         includeZero: true,
         title: "Likelihood of FH",
-        titleFontSize: 16,
+        titleFontSize: 18,
         titleFontFamily: "times new roman",
-        labelFontSize: 14,
+        labelFontSize: 16,
         labelFontFamily: "times new roman",
         maximum: 1,
         minimum: 0,
