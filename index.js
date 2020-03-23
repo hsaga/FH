@@ -33,7 +33,7 @@ function makePrediction(){
 
     predictionArray = prediction.arraySync();
 
-    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + predictionArray[0][0];
+    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + predictionArray[0][0].toFixed(2);
 
     // Classification tree
     const x = 1;
