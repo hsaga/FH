@@ -54,11 +54,11 @@ function makePrediction(){
         type: "rangeBar",
         showInLegend: false,
         yValueFormatString: " ",
-        indexLabel: "{y[#index]}",
+        indexLabel: " ",
         legendText: "Department wise Min and Max Salary",
         toolTipContent: "{y[1]}",
         dataPoints: [
-          {y:[0, 0.6]},
+          {y:[0, predictionArray[0][0].toFixed(2)]},
         ]
       }]
     });
