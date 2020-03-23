@@ -44,12 +44,13 @@ function makePrediction(){
       },
       axisX: {
         maximum: 1,
+        interval: 0.1
+
         
       },
       axisY: {
         includeZero: false,
         title: "Likelihood of FH",
-        interval: 0.1,
         valueFormatString:  " "
       }, 
       data: [{
