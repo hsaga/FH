@@ -43,22 +43,24 @@ function makePrediction(){
         text: "Prediction"
       },
       axisX: {
+        maximum: 1,
         
       },
       axisY: {
         includeZero: false,
         title: "Likelihood of FH",
-        interval: 0.1
+        interval: 0.1,
+        valueFormatString:  " "
       }, 
       data: [{
-        type: "rangeBar",
+        type: "bar",
         showInLegend: false,
         yValueFormatString: " ",
         indexLabel: " ",
         legendText: " ",
         toolTipContent: "{y[1]}",
         dataPoints: [
-          {y:[0, 0.6]},
+          {y: 0.6},
         ]
       }]
     });
