@@ -73,8 +73,7 @@ function makePrediction(){
         yValueFormatString: " ",
         dataPoints: [
           {x: 0.5, y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
-        ],
-        indexLabel: {y}
+        ]
       }]
     });
 
