@@ -35,6 +35,36 @@ function makePrediction(){
 
     document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + predictionArray[0][0].toFixed(2);
 
+    // Chart 
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      exportEnabled: true,
+      title: {
+        text: "Prediction"
+      },
+      axisX: {
+        
+      },
+      axisY: {
+        includeZero: true,
+        title: "Likelyhood of FH",
+        interval: 0.1
+      }, 
+      data: [{
+        type: "rangeBar",
+        showInLegend: true,
+        yValueFormatString: "#0.#",
+        indexLabel: "{y[#index]}",
+        legendText: "Department wise Min and Max Salary",
+        toolTipContent: "<b>{label}</b>: {y[0]} to {y[1]}",
+        dataPoints: [
+          { x: 1, y:[0, 0.6]},
+        ]
+      }]
+    });
+    chart.render();
+
+
     // Classification tree
     const x = 1;
     const y = 1;
