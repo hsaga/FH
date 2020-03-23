@@ -46,23 +46,23 @@ function makePrediction(){
         
       },
       axisY: {
-        includeZero: true,
-        title: "Likelyhood of FH",
+        includeZero: false,
+        title: "Likelihood of FH",
         interval: 0.1
       }, 
       data: [{
         type: "rangeBar",
-        showInLegend: true,
+        showInLegend: false,
         yValueFormatString: "#0.#",
         indexLabel: "{y[#index]}",
         legendText: "Department wise Min and Max Salary",
-        toolTipContent: "<b>{label}</b>: {y[0]} to {y[1]}",
+        toolTipContent: "{y[1]}",
         dataPoints: [
-          { x: 1, y:[0, 0.6]},
+          { x: 0, y:[0, 0.6]},
         ]
       }]
     });
-    
+
     chart.render();
 
 
