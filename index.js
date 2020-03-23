@@ -46,14 +46,18 @@ function makePrediction(){
         valueFormatString:  " ",
         indexLabel: " ",
         minimum: 0,
-        maximum: 0.1,
-        interval: 0.1,
-        gridThickness: 0
+        maximum: 1,
+        interval: 1,
+        gridThickness: 0,
+        tickLength: 0,
+        tickThickness: 0
         
       },
       axisY: {
         includeZero: true,
         title: "Likelihood of FH",
+        titleFontSize: 16,
+        labelFontSize: 14,
         maximum: 1,
         minimum: 0,
         interval: 0.1
@@ -68,7 +72,7 @@ function makePrediction(){
         legendText: " ",
         toolTipContent: "{y}",
         dataPoints: [
-          {y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
+          {x: 0.5, y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
         ]
       }]
     });
