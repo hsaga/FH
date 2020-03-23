@@ -13,22 +13,27 @@
 </head>
 
 <body>
-    <h1 id="prediction"> FH predictor</h1>
+    <h1 id="prediction"> FH Virtual Genetic Diagnosis</h1>
 
-    <p>Enter values in the fields, then click "Predict" to get the predictions.<br> 
-        Predictions go from 0 (non-carrier) to 1 (carrier).<br>
+    <p>Enter values in the fields, then click "Predict" to get the likelihood of carrying a mutation causing familial hypercholesterolemia (FH).
+        <br> 
+        Predictions ranges from 0 (non-carrier) to 1 (carrier).<br>
         <br>
+        <!--
         Note that the Classification tree needs to be trained.<br>
+        -->
     </p>
 
     <form id="frm1">
-    Age:<br> 
+    Patient ID:<br> 
+    <input type="number" name="ID"><br>
+    Age (Years):<br> 
     <input type="number" name="age"><br>
-    LDL:<br> 
+    LDL (mmol/L):<br> 
     <input type="number" name="ldl"><br>
-    HDL:<br> 
+    HDL (mmol/L):<br> 
     <input type="number" name="hdl"><br>
-    TG:<br> 
+    TG (mmol/L):<br> 
     <input type="number" name="tg"><br><br>
 
     Your prediction:<br> 
@@ -51,7 +56,9 @@
 
     <p id="NNprediction"></p>
     
+    <!--  
     <p id="CTprediction"></p>
+    -->
 
     <script src="index.js"></script>
 
