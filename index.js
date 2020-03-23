@@ -59,11 +59,12 @@ function makePrediction(){
         interval: 0.1
         
       }, 
+      dataPointWidth: 20,
       data: [{
         type: "bar",
         showInLegend: false,
         yValueFormatString: " ",
-        indexLabel: " ",
+        indexLabel: "{y}",
         legendText: " ",
         toolTipContent: "{y}",
         dataPoints: [
