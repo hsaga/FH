@@ -60,7 +60,8 @@ function makePrediction(){
         labelFontSize: 14,
         maximum: 1,
         minimum: 0,
-        interval: 0.1
+        interval: 0.1,
+        lineThickness: 2
         
       }, 
       dataPointWidth: 70,
