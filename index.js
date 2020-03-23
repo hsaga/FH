@@ -33,7 +33,7 @@ function makePrediction(){
 
     predictionArray = prediction.arraySync();
 
-    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + Math.round(predictionArray[0][0] * 1e3) / 1e3;
+    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
     // Chart 
     var chart = new CanvasJS.Chart("chartContainer", {
@@ -43,15 +43,15 @@ function makePrediction(){
         text: "Prediction"
       },
       axisX: {
-        maximum: 1,
-        interval: 0.1
-
+        valueFormatString:  " "
         
       },
       axisY: {
         includeZero: false,
         title: "Likelihood of FH",
-        valueFormatString:  " "
+        maximum: 1,
+        interval: 0.1
+        
       }, 
       data: [{
         type: "bar",
