@@ -58,7 +58,7 @@ function makePrediction(){
         legendText: " ",
         toolTipContent: "{y[1]}",
         dataPoints: [
-          {y:[0, predictionArray[0][0].toFixed(2)]},
+          {y:[0, 0.6]},
         ]
       }]
     });
