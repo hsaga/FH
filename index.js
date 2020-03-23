@@ -62,6 +62,7 @@ function makePrediction(){
         ]
       }]
     });
+    
     chart.render();
 
 
