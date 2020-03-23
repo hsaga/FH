@@ -59,7 +59,7 @@ function makePrediction(){
         titleFontSize: 16,
         titleFontFamily: "times new roman",
         labelFontSize: 14,
-        titleFontFamily: "times new roman",
+        labelFontFamily: "times new roman",
         maximum: 1,
         minimum: 0,
         interval: 0.1,
