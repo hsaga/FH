@@ -59,7 +59,7 @@ function makePrediction(){
         yValueFormatString: " ",
         indexLabel: " ",
         legendText: " ",
-        toolTipContent: "{y[1]}",
+        toolTipContent: "{y}",
         dataPoints: [
           {y: 0.6},
         ]
