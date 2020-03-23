@@ -40,7 +40,7 @@ function makePrediction(){
       animationEnabled: true,
       exportEnabled: false,
       title: {
-        text: "Prediction"
+        text: " "
       },
       axisX: {
         valueFormatString:  " ",
@@ -59,7 +59,7 @@ function makePrediction(){
         interval: 0.1
         
       }, 
-      dataPointWidth: 20,
+      dataPointWidth: 70,
       data: [{
         type: "bar",
         showInLegend: false,
