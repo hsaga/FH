@@ -46,7 +46,9 @@ function makePrediction(){
         valueFormatString:  " ",
         indexLabel: " ",
         minimum: 0,
-        maximum: 1
+        maximum: 1,
+        interval: 1,
+        gridThickness: 0
         
       },
       axisY: {
