@@ -38,18 +38,22 @@ function makePrediction(){
     // Chart 
     var chart = new CanvasJS.Chart("chartContainer", {
       animationEnabled: true,
-      exportEnabled: true,
+      exportEnabled: false,
       title: {
         text: "Prediction"
       },
       axisX: {
-        valueFormatString:  " "
+        valueFormatString:  " ",
+        indexLabel: " ",
+        minimum: 0,
+        maximum: 1
         
       },
       axisY: {
-        includeZero: false,
+        includeZero: true,
         title: "Likelihood of FH",
         maximum: 1,
+        minimum: 0,
         interval: 0.1
         
       }, 
@@ -61,7 +65,7 @@ function makePrediction(){
         legendText: " ",
         toolTipContent: "{y}",
         dataPoints: [
-          {y: 0.6},
+          {y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
         ]
       }]
     });
