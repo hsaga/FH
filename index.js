@@ -33,7 +33,7 @@ function makePrediction(){
 
     predictionArray = prediction.arraySync();
 
-    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + predictionArray[0][0].toFixed(2);
+    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: ' + Math.round(predictionArray[0][0] * 1e3) / 1e3;
 
     // Chart 
     var chart = new CanvasJS.Chart("chartContainer", {
