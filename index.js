@@ -39,15 +39,15 @@ function makePrediction(){
 
     if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.4)
     {
-      let col = "green";
+      var col = "green";
     }
     else if (predictionArray[0][0] >= 0.4 && predictionArray[0][0] < 0.7)
 		{
-		  let col = "yellow";
+		  var col = "yellow";
 		}
 		else if (predictionArray[0][0] >= 0.7 && predictionArray[0][0] <=1)
 		{
-		  let col = "red";
+		  var col = "red";
 		}
 
     console.log(col)
