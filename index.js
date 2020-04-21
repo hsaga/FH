@@ -38,15 +38,15 @@ function makePrediction(){
 
     //let pred = Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
-    if (0<=predictionArray[0][0]<0.4)
+    if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.4)
     {
       let col = "green";
     }
-    if (0.4<=predictionArray[0][0]<0.7)
+    if (predictionArray[0][0] >= 0.4 && predictionArray[0][0] < 0.7)
     {
       let col = "yellow";
     }
-    if (0.7<=predictionArray[0][0]<=1)
+    if (predictionArray[0][0] >= 0.7 && predictionArray[0][0] <=1)
     {
       let col = "red";
     }
