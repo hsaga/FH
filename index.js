@@ -68,6 +68,7 @@ function makePrediction(){
       }, 
       dataPointWidth: 40,
       data: [{
+        color: "red",
         type: "bar",
         showInLegend: false,
         yValueFormatString: " ",
