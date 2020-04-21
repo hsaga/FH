@@ -40,11 +40,11 @@ function makePrediction(){
     {
       var col = "green";
     }
-    else if (0.4<=predictionArray[0][0]<0.7)
+    if (0.4<=predictionArray[0][0]<0.7)
     {
       var col = "yellow";
     }
-    else if (0.7<=predictionArray[0][0]<=1)
+    if (0.7<=predictionArray[0][0]<=1)
     {
       var col = "red";
     }
