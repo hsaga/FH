@@ -36,15 +36,17 @@ function makePrediction(){
 
     document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
-    if (0<=predictionArray[0][0]<0.4)
+    let pred = Math.round(predictionArray[0][0] * 1e2) / 1e2;
+
+    if (0<=pred<0.4)
     {
       let col = "green";
     }
-    if (0.4<=predictionArray[0][0]<0.7)
+    if (0.4<=pred<0.7)
     {
       let col = "yellow";
     }
-    if (0.7<=predictionArray[0][0]<=1)
+    if (0.7<=pred<=1)
     {
       let col = "red";
     }
