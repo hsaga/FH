@@ -44,9 +44,9 @@ function makePrediction(){
     {
       let col = "yellow";
     }
-    let (0.7<=predictionArray[0][0]<=1)
+    if (0.7<=predictionArray[0][0]<=1)
     {
-      var col = "red";
+      let col = "red";
     }
 
     // Chart 
