@@ -33,20 +33,21 @@ function makePrediction(){
 
     predictionArray = prediction.arraySync();
 
-    if (0<=predictionArray[0]<0.4)
-      {
-        var col = 'green'
-      }
-    if (0.4<=predictionArray[0]<0.7)
-    {
-      var col = 'yellow'
-    }
-    if (0.7<=predictionArray[0]<=1)
-    {
-      var col = 'red'
-    }
 
     document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
+
+    if (0<=predictionArray[0][0]<0.4)
+    {
+      var col = "green"
+    }
+    if (0.4<=predictionArray[0][0]<0.7)
+    {
+      var col = "yellow"
+    }
+    if (0.7<=predictionArray[0][0]<=1)
+    {
+      var col = "red"
+    }
 
     // Chart 
     var chart = new CanvasJS.Chart("chartContainer", {
@@ -81,7 +82,7 @@ function makePrediction(){
       }, 
       dataPointWidth: 40,
       data: [{
-        color: "col,
+        color: col,
         type: "bar",
         showInLegend: false,
         yValueFormatString: " ",
