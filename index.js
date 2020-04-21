@@ -38,15 +38,15 @@ function makePrediction(){
 
     if (0<=predictionArray[0][0]<0.4)
     {
-      var col = "green"
+      var col = "green";
     }
-    if (0.4<=predictionArray[0][0]<0.7)
+    else if (0.4<=predictionArray[0][0]<0.7)
     {
-      var col = "yellow"
+      var col = "yellow";
     }
-    if (0.7<=predictionArray[0][0]<=1)
+    else if (0.7<=predictionArray[0][0]<=1)
     {
-      var col = "red"
+      var col = "red";
     }
 
     // Chart 
