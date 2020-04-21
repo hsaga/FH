@@ -36,21 +36,21 @@ function makePrediction(){
 
     document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
-    //let pred = Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
     if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.4)
     {
       let col = "green";
     }
-    if (predictionArray[0][0] >= 0.4 && predictionArray[0][0] < 0.7)
-    {
-      let col = "yellow";
-    }
-    if (predictionArray[0][0] >= 0.7 && predictionArray[0][0] <=1)
-    {
-      let col = "red";
-    }
+    else if (predictionArray[0][0] >= 0.4 && predictionArray[0][0] < 0.7)
+		{
+		  let col = "yellow";
+		}
+		else if (predictionArray[0][0] >= 0.7 && predictionArray[0][0] <=1)
+		{
+		  let col = "red";
+		}
 
+    console.log(col)
     // Chart 
     var chart = new CanvasJS.Chart("chartContainer", {
       animationEnabled: true,
