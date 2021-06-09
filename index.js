@@ -37,15 +37,15 @@ function makePrediction(){
     document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
 
-    if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.4)
+    if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.25)
     {
       var col = "green";
     }
-    else if (predictionArray[0][0] >= 0.4 && predictionArray[0][0] < 0.7)
+    else if (predictionArray[0][0] >= 0.25 && predictionArray[0][0] < 0.75)
 		{
 		  var col = "yellow";
 		}
-		else if (predictionArray[0][0] >= 0.7 && predictionArray[0][0] <=1)
+		else if (predictionArray[0][0] >= 0.75 && predictionArray[0][0] <=1)
 		{
 		  var col = "red";
 		}
