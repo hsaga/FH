@@ -43,7 +43,7 @@ function makePrediction(){
     }
     else if (predictionArray[0][0] >= 0.25 && predictionArray[0][0] < 0.75)
 		{
-		  var col = "yellow";
+		  var col = "red";
 		}
 		else if (predictionArray[0][0] >= 0.75 && predictionArray[0][0] <=1)
 		{
