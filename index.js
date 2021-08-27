@@ -16,135 +16,146 @@ function makePrediction(){
   const tg = Number(document.forms["frm1"]["tg"].value);
   const yourPrediction = Number(document.forms["frm1"]["yourPrediction"].value);
 
-  console.log(yourPrediction);
+  if (age < 1 || age > 80)
+  {
+    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+  }
 
-  // Construct the variables and standardize
-  const var1 = (hdl - meanVar1) / stdVar1;
-  const var2 = (ldl/age  - meanVar2) / stdVar2;
-  const var3 = (tg/ldl  - meanVar3) / stdVar3;
+  else
+  {
+    console.log(yourPrediction);
 
-  // Models and predictions
-  (async () => {
+    // Construct the variables and standardize
+    const var1 = (hdl - meanVar1) / stdVar1;
+    const var2 = (ldl/age  - meanVar2) / stdVar2;
+    const var3 = (tg/ldl  - meanVar3) / stdVar3;
 
-    // Neural network
-    const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
+    // Models and predictions
+    (async () => {
 
-    let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
+      // Neural network
+      const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
 
-    predictionArray = prediction.arraySync();
+      let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
 
-
-    document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
-
-
-    if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.25)
-    {
-      var col = "green";
-      document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
-
-    }
-    /*
-    else if (predictionArray[0][0] >= 0.25 && predictionArray[0][0] < 0.75)
-		{
-		  var col = "green";
-      document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
-		}
-    */
-		else if (predictionArray[0][0] >= 0.75 && predictionArray[0][0] <=1)
-		{
-		  var col = "red";
-      document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: Yes'.bold();
-		}
-
-    console.log(col)
-    // Chart 
-    var chart = new CanvasJS.Chart("chartContainer", {
-      animationEnabled: true,
-      exportEnabled: false,
-      title: {
-        text: " "
-      },
-      axisX: {
-        valueFormatString:  " ",
-        indexLabel: " ",
-        minimum: 0,
-        maximum: 1,
-        interval: 1,
-        gridThickness: 0,
-        tickLength: 0,
-        tickThickness: 0
-        
-      },
-      axisY: {
-        includeZero: true,
-        title: "Likelihood of FH",
-        titleFontSize: 18,
-        titleFontFamily: "times new roman",
-        labelFontSize: 16,
-        labelFontFamily: "times new roman",
-        maximum: 1,
-        minimum: 0,
-        interval: 0.1,
-        lineThickness: 2
-        
-      }, 
-      dataPointWidth: 40,
-      data: [{
-        color: col,
-        type: "bar",
-        showInLegend: false,
-        yValueFormatString: " ",
-        dataPoints: [
-          {x: 0.5, y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
-        ]
-      }]
-    });
-
-    chart.render();
+      predictionArray = prediction.arraySync();
 
 
-    // Classification tree
-    const x = 1;
-    const y = 1;
-    const z = 1;
+      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
 
-    let CTprediction = undefined;
 
-    if (var2 < x) 
-    {
-      if (var3 > y) 
+      if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.25)
+      {
+        var col = "green";
+        document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
+
+      }
+      /*
+      else if (predictionArray[0][0] >= 0.25 && predictionArray[0][0] < 0.75)
+      {
+        var col = "green";
+        document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
+      }
+      */
+      else if (predictionArray[0][0] >= 0.75 && predictionArray[0][0] <=1)
+      {
+        var col = "red";
+        document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: Yes'.bold();
+      }
+
+      console.log(col)
+      // Chart 
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        exportEnabled: false,
+        title: {
+          text: " "
+        },
+        axisX: {
+          valueFormatString:  " ",
+          indexLabel: " ",
+          minimum: 0,
+          maximum: 1,
+          interval: 1,
+          gridThickness: 0,
+          tickLength: 0,
+          tickThickness: 0
+          
+        },
+        axisY: {
+          includeZero: true,
+          title: "Likelihood of FH",
+          titleFontSize: 18,
+          titleFontFamily: "times new roman",
+          labelFontSize: 16,
+          labelFontFamily: "times new roman",
+          maximum: 1,
+          minimum: 0,
+          interval: 0.1,
+          lineThickness: 2
+          
+        }, 
+        dataPointWidth: 40,
+        data: [{
+          color: col,
+          type: "bar",
+          showInLegend: false,
+          yValueFormatString: " ",
+          dataPoints: [
+            {x: 0.5, y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
+          ]
+        }]
+      });
+
+      chart.render();
+
+
+
+
+
+      // Classification tree
+      const x = 1;
+      const y = 1;
+      const z = 1;
+
+      let CTprediction = undefined;
+
+      if (var2 < x) 
+      {
+        if (var3 > y) 
+        {
+          CTprediction = 0;
+        }
+        else if (var1 > z)
+        {
+          CTprediction = 0;
+        }
+        else 
+        {
+          CTprediction = 1;
+        }
+      } 
+
+      else if (var3 > y) 
       {
         CTprediction = 0;
       }
-      else if (var1 > z)
-      {
-        CTprediction = 0;
-      }
-      else 
+
+      else
       {
         CTprediction = 1;
       }
-    } 
+      /*
+      document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: ' + CTprediction;
+      */
 
-    else if (var3 > y) 
-    {
-      CTprediction = 0;
-    }
-
-    else
-    {
-      CTprediction = 1;
-    }
-    /*
-    document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: ' + CTprediction;
-    */
-
-    document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: Not available';
+      document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: Not available';
 
 
 
 
-  })();
+    })();
+  }
 
 }
 
