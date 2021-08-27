@@ -18,49 +18,42 @@ function makePrediction(){
 
   if (age < 1)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'Age must be greater than or equal to 1'.bold();
   }
 
   else if (age > 80)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'Age must be less than or equal to 80'.bold();
+    document.getElementById("InputRange").innerHTML.style.color = red;
   }
 
   else if (ldl < 1)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'LDL must be greater than or equal to 1'.bold();
   }
 
   else if (ldl > 14)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'LDL must be less than or equal to 14'.bold();
   }
 
   else if (hdl < 1)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'HDL must be greater than or equal to 1'.bold();
   }
 
   else if (hdl > 5)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'HDL must be less than or equal to 5'.bold();
   }
 
   else if (tg < 1)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'TG must be greater than or equal to 1'.bold();
   }
 
   else if (tg > 10)
   {
-    var col = "red";
     document.getElementById("InputRange").innerHTML = 'TG must be less than or equal to 10'.bold();
   }
 
