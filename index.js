@@ -43,11 +43,13 @@ function makePrediction(){
       document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
 
     }
+    /*
     else if (predictionArray[0][0] >= 0.25 && predictionArray[0][0] < 0.75)
 		{
 		  var col = "green";
       document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
 		}
+    */
 		else if (predictionArray[0][0] >= 0.75 && predictionArray[0][0] <=1)
 		{
 		  var col = "red";
