@@ -31,7 +31,7 @@ function makePrediction(){
     document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
   }
 
-  if (tg < 0 || tg > 10)
+  else if (tg < 0 || tg > 10)
   {
     document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
   }
