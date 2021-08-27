@@ -21,6 +21,21 @@ function makePrediction(){
     document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
   }
 
+  else if (ldl < 1 || ldl > 14)
+  {
+    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+  }
+
+  else if (hdl < 0 || hdl > 3)
+  {
+    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+  }
+
+  if (tg < 0 || tg > 10)
+  {
+    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+  }
+
   else
   {
     console.log(yourPrediction);
