@@ -16,24 +16,52 @@ function makePrediction(){
   const tg = Number(document.forms["frm1"]["tg"].value);
   const yourPrediction = Number(document.forms["frm1"]["yourPrediction"].value);
 
-  if (age < 1 || age > 80)
+  if (age < 1)
   {
-    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'Age must be greater than or equal to 1'.bold();
   }
 
-  else if (ldl < 1 || ldl > 14)
+  else if (age > 80)
   {
-    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'Age must be less than or equal to 80'.bold();
   }
 
-  else if (hdl < 0 || hdl > 3)
+  else if (ldl < 1)
   {
-    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'LDL must be greater than or equal to 1'.bold();
   }
 
-  else if (tg < 0 || tg > 10)
+  else if (ldl > 14)
   {
-    document.getElementById("InputRange").innerHTML = 'Age must be 1-80'.bold();
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'LDL must be less than or equal to 14'.bold();
+  }
+
+  else if (hdl < 1)
+  {
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'HDL must be greater than or equal to 1'.bold();
+  }
+
+  else if (hdl > 5)
+  {
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'HDL must be less than or equal to 5'.bold();
+  }
+
+  else if (tg < 1)
+  {
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'TG must be greater than or equal to 1'.bold();
+  }
+
+  else if (tg > 10)
+  {
+    var col = "red";
+    document.getElementById("InputRange").innerHTML = 'TG must be less than or equal to 10'.bold();
   }
 
   else
