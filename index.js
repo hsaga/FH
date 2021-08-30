@@ -87,7 +87,7 @@ function makePrediction(){
       document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray0[0][0] * 1e2) / 1e2 + Math.round(predictionArray1[0][0] * 1e2) / 1e2 + Math.round(meanPrediction * 1e2) / 1e2;
 
 
-      if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.25)
+      if (meanPrediction >= 0 && meanPrediction < 0.25)
       {
         var col = "green";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
@@ -100,7 +100,7 @@ function makePrediction(){
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
       }
       */
-      else if (predictionArray[0][0] >= 0.75 && predictionArray[0][0] <=1)
+      else if (meanPrediction >= 0.75 && meanPrediction <=1)
       {
         var col = "red";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: Yes'.bold();
