@@ -77,9 +77,25 @@ function makePrediction(){
 
       let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction2 =  model2.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction3 =  model3.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction4 =  model4.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction5 =  model5.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction6 =  model6.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction7 =  model7.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction8 =  model8.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction9 =  model9.predict(tf.tensor2d([[var1, var2, var3]]));
 
       predictionArray0 = prediction0.arraySync();
       predictionArray1 = prediction1.arraySync();
+      predictionArray2 = prediction2.arraySync();
+      predictionArray3 = prediction3.arraySync();
+      predictionArray4 = prediction4.arraySync();
+      predictionArray5 = prediction5.arraySync();
+      predictionArray6 = prediction6.arraySync();
+      predictionArray7 = prediction7.arraySync();
+      predictionArray8 = prediction8.arraySync();
+      predictionArray9 = prediction9.arraySync();
 
       let meanPrediction = ( Math.round(predictionArray0[0][0]*1e2)/1e2; /* + Math.round(predictionArray1[0][0]*1e2)/1e2 ) / 2; */
 
