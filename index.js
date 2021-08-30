@@ -74,6 +74,14 @@ function makePrediction(){
       // Neural network
       const model0 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model0.json');
       const model1 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model1.json');
+      const model2 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model2.json');
+      const model3 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model3.json');
+      const model4 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model4.json');
+      const model5 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model5.json');
+      const model6 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model6.json');
+      const model7 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model7.json');
+      const model8 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model8.json');
+      const model9 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model9.json');
 
       let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
       /* let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
