@@ -82,7 +82,7 @@ function makePrediction(){
       const model6 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model6/model6.json');
       const model7 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model7/model7.json');
       const model8 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model8/model8.json');
-      const model9 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model9_model9.json');
+      const model9 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model9/model9.json');
 
       let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
