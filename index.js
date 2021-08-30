@@ -108,7 +108,7 @@ function makePrediction(){
       predictionArray8 = prediction8.arraySync();
       predictionArray9 = prediction9.arraySync();
 
-      let meanPrediction =  Math.round(predictionArray5[0][0]*1e2)/1e2; /* + Math.round(predictionArray1[0][0]*1e2)/1e2 ) / 2; */
+      let meanPrediction = ( Math.round(predictionArray0[0][0]*1e2)/1e2 + Math.round(predictionArray1[0][0]*1e2)/1e2 + Math.round(predictionArray2[0][0]*1e2)/1e2) / 3;
 
 
       document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + meanPrediction;
