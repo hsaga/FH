@@ -72,14 +72,19 @@ function makePrediction(){
     (async () => {
 
       // Neural network
-      const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
+      const model0 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model0.json');
+      const model1 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model1.json');
 
-      let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
 
-      predictionArray = prediction.arraySync();
+      predictionArray0 = prediction0.arraySync();
+      predictionArray1 = prediction1.arraySync();
+
+      let meanPrediction = (predictionArray0[0][0] + predictionArray0[0][0])/2
 
 
-      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0] * 1e2) / 1e2;
+      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray0[0][0] * 1e2) / 1e2 + Math.round(predictionArray1[0][0] * 1e2) / 1e2 + Math.round(meanPrediction * 1e2) / 1e2;
 
 
       if (predictionArray[0][0] >= 0 && predictionArray[0][0] < 0.25)
