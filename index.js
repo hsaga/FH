@@ -111,7 +111,7 @@ function makePrediction(){
       let meanPrediction =  Math.round(predictionArray[0][0]*1e2)/1e2; /* + Math.round(predictionArray1[0][0]*1e2)/1e2 ) / 2; */
 
 
-      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + predictionArray1;
+      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray[0][0]*1e2)/1e2;
 
 
       if (meanPrediction >= 0 && meanPrediction < 0.25)
