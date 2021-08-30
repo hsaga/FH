@@ -84,7 +84,7 @@ function makePrediction(){
       const model9 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model9.json');
 
       let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
-      /let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction2 =  model2.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction3 =  model3.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction4 =  model4.predict(tf.tensor2d([[var1, var2, var3]]));
