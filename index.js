@@ -96,7 +96,7 @@ function makePrediction(){
       let prediction8 =  model8.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction9 =  model9.predict(tf.tensor2d([[var1, var2, var3]])); 
 
-      predictionArray = prediction0.arraySync();
+      predictionArray = prediction.arraySync();
       predictionArray0 = prediction0.arraySync();
       predictionArray1 = prediction1.arraySync();
       predictionArray2 = prediction2.arraySync();
