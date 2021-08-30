@@ -72,6 +72,7 @@ function makePrediction(){
     (async () => {
 
       // Neural network
+      const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
       const model0 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model0.json');
       const model1 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model1.json');
       const model2 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model2.json');
@@ -83,6 +84,7 @@ function makePrediction(){
       const model8 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model8.json');
       const model9 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model9.json');
 
+      let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction2 =  model2.predict(tf.tensor2d([[var1, var2, var3]]));
@@ -94,6 +96,7 @@ function makePrediction(){
       let prediction8 =  model8.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction9 =  model9.predict(tf.tensor2d([[var1, var2, var3]])); 
 
+      predictionArray = prediction0.arraySync();
       predictionArray0 = prediction0.arraySync();
       predictionArray1 = prediction1.arraySync();
       predictionArray2 = prediction2.arraySync();
@@ -105,7 +108,7 @@ function makePrediction(){
       predictionArray8 = prediction8.arraySync();
       predictionArray9 = prediction9.arraySync();
 
-      let meanPrediction =  Math.round(predictionArray1[0][0]*1e2)/1e2; /* + Math.round(predictionArray1[0][0]*1e2)/1e2 ) / 2; */
+      let meanPrediction =  Math.round(predictionArray[0][0]*1e2)/1e2; /* + Math.round(predictionArray1[0][0]*1e2)/1e2 ) / 2; */
 
 
       document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + predictionArray1;
