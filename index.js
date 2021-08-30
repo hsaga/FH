@@ -81,10 +81,10 @@ function makePrediction(){
       predictionArray0 = prediction0.arraySync();
       predictionArray1 = prediction1.arraySync();
 
-      let meanPrediction = (predictionArray0[0][0] + predictionArray0[0][0])/2
+      let meanPrediction = (predictionArray0[0][0] + predictionArray0[0][0])/2;
 
 
-      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(predictionArray0[0][0] * 1e2) / 1e2 + Math.round(predictionArray1[0][0] * 1e2) / 1e2 + Math.round(meanPrediction * 1e2) / 1e2;
+      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(meanPrediction * 1e2) / 1e2;
 
 
       if (meanPrediction >= 0 && meanPrediction < 0.25)
@@ -145,7 +145,7 @@ function makePrediction(){
           showInLegend: false,
           yValueFormatString: " ",
           dataPoints: [
-            {x: 0.5, y:  Math.round(predictionArray[0][0] * 1e2) / 1e2},
+            {x: 0.5, y:  Math.round(meanPrediction * 1e2) / 1e2},
           ]
         }]
       });
