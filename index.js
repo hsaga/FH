@@ -1,12 +1,12 @@
 
 // Define the mean and std for gothenburg training set for normalization
-const meanVar1 = 1.51262097;
-const meanVar2 = 0.15645247;
-const meanVar3 = 0.24278265;
+const meanVar1 = 1.488902;
+const meanVar2 = 0.151814;
+const meanVar3 = 0.224245;
 
-const stdVar1 = 0.48458161;
-const stdVar2 = 0.07073377;
-const stdVar3 = 0.19097731;
+const stdVar1 = 0.474977;
+const stdVar2 = 0.067453;
+const stdVar3 = 0.116834;
 
 // Function that makes the predictions
 function makePrediction(){
