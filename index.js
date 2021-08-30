@@ -76,7 +76,7 @@ function makePrediction(){
       const model1 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model1.json');
 
       let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
-      let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
+      /* let prediction1 =  model1.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction2 =  model2.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction3 =  model3.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction4 =  model4.predict(tf.tensor2d([[var1, var2, var3]]));
@@ -84,10 +84,10 @@ function makePrediction(){
       let prediction6 =  model6.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction7 =  model7.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction8 =  model8.predict(tf.tensor2d([[var1, var2, var3]]));
-      let prediction9 =  model9.predict(tf.tensor2d([[var1, var2, var3]]));
+      let prediction9 =  model9.predict(tf.tensor2d([[var1, var2, var3]])); */
 
       predictionArray0 = prediction0.arraySync();
-      predictionArray1 = prediction1.arraySync();
+      /* predictionArray1 = prediction1.arraySync();
       predictionArray2 = prediction2.arraySync();
       predictionArray3 = prediction3.arraySync();
       predictionArray4 = prediction4.arraySync();
@@ -95,12 +95,12 @@ function makePrediction(){
       predictionArray6 = prediction6.arraySync();
       predictionArray7 = prediction7.arraySync();
       predictionArray8 = prediction8.arraySync();
-      predictionArray9 = prediction9.arraySync();
+      predictionArray9 = prediction9.arraySync();*/
 
-      let meanPrediction =  Math.round(predictionArray0[0][0]*1e2/1e2); /* + Math.round(predictionArray1[0][0]*1e2)/1e2 ) / 2; */
+      let meanPrediction =  Math.round(predictionArray0[0][0]*1e2)/1e2; /* + Math.round(predictionArray1[0][0]*1e2)/1e2 ) / 2; */
 
 
-      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + predictionArray0;
+      document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + predictionArray0[0][0];
 
 
       if (meanPrediction >= 0 && meanPrediction < 0.25)
