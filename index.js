@@ -72,17 +72,17 @@ function makePrediction(){
     (async () => {
 
       // Neural network
-      const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model5/model5.json');
-      const model0 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model0.json');
-      const model1 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model1.json');
-      const model2 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model2.json');
-      const model3 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model3.json');
-      const model4 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model4.json');
-      const model5 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model5.json');
-      const model6 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model6.json');
-      const model7 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model7.json');
-      const model8 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model8.json');
-      const model9 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/model9.json');
+      const model = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs_model/model.json');
+      const model0 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model0/model0.json');
+      const model1 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model1/model1.json');
+      const model2 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model2/model2.json');
+      const model3 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model3/model3.json');
+      const model4 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model4/model4.json');
+      const model5 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model5/model5.json');
+      const model6 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model6/model6.json');
+      const model7 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model7/model7.json');
+      const model8 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model8/model8.json');
+      const model9 = await tf.loadLayersModel('https://hsaga.github.io/FH/tfjs/tfjs_model9_model9.json');
 
       let prediction =  model.predict(tf.tensor2d([[var1, var2, var3]]));
       let prediction0 =  model0.predict(tf.tensor2d([[var1, var2, var3]]));
