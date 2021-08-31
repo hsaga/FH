@@ -207,7 +207,7 @@ function makePrediction(){
 
       chart.render();
       document.getElementById("chartContainer").style.height = "100px"; 
-      document.getElementById("chartContainer").style.width = "60px";
+      document.getElementById("chartContainer").style.width = "60%";
 
 
 
