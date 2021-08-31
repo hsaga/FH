@@ -26,7 +26,7 @@ function makePrediction(){
     document.getElementById("InputRange").innerHTML = 'Age must be less than or equal to 80'.bold();
     document.getElementById("NNprediction").style.display="none";
     document.getElementById("GeneticTesting").style.display="none";
-    chart.clear();
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else if (ldl < 1)
