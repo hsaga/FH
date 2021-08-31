@@ -82,7 +82,7 @@ function makePrediction(){
 
   else
   {
-    /* document.getElementById("InputRange").innerHTML = ''; */
+    document.getElementById("InputRange").innerHTML = ''; 
 
     console.log(yourPrediction);
 
