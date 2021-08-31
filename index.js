@@ -24,7 +24,6 @@ function makePrediction(){
   else if (age > 80)
   {
     document.getElementById("InputRange").innerHTML = 'Age must be less than or equal to 80'.bold();
-    document.getElementById("InputRange").innerHTML.style.color = red;
     document.getElementById("NNprediction").innerHTML.style.display="none";
     document.getElementById("GeneticTesting").innerHTML.style.display="none";
   }
