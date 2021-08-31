@@ -135,7 +135,7 @@ function makePrediction(){
 
 
       document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(meanPrediction*1e2)/1e2;
-      document.getElementById("NNprediction").style.display="initial";
+      document.getElementById("NNprediction").style.display="compact";
      
 
 
@@ -143,7 +143,7 @@ function makePrediction(){
       {
         var col = "green";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
-        document.getElementById("GeneticTesting").style.display="initial";
+        document.getElementById("GeneticTesting").style.display="compact";
        
 
       }
@@ -158,7 +158,7 @@ function makePrediction(){
       {
         var col = "red";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: Yes'.bold();
-        document.getElementById("GeneticTesting").style.display="initial";
+        document.getElementById("GeneticTesting").style.display="compact";
       }
 
       console.log(col)
@@ -206,7 +206,7 @@ function makePrediction(){
       });
 
       chart.render();
-      document.getElementById("chartContainer").style.display="initial";
+      document.getElementById("chartContainer").style.display="compact";
 
 
 
