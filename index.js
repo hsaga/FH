@@ -135,8 +135,7 @@ function makePrediction(){
 
 
       document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(meanPrediction*1e2)/1e2;
-      /* document.getElementById("NNprediction").style.display="block"; */
-      document.getElementById("NNprediction").style="height: 100px; width: 60%;"
+      document.getElementById("NNprediction").style.display="block";
      
 
 
@@ -207,7 +206,7 @@ function makePrediction(){
       });
 
       chart.render();
-      document.getElementById("chartContainer").style.display="block";
+      document.getElementById("chartContainer").style="height: 100px; width: 60%;" /*.style.display="block"; */
 
 
 
