@@ -135,12 +135,16 @@ function makePrediction(){
 
 
       document.getElementById("NNprediction").innerHTML = 'Neural network prediction: '.bold() + Math.round(meanPrediction*1e2)/1e2;
+      document.getElementById("NNprediction").style.display="initial";
+     
 
 
       if (meanPrediction >= 0 && meanPrediction < 0.25)
       {
         var col = "green";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
+        document.getElementById("GeneticTesting").style.display="initial";
+       
 
       }
       /*
