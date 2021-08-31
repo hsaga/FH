@@ -16,7 +16,7 @@ function makePrediction(){
   const tg = Number(document.forms["frm1"]["tg"].value);
   const yourPrediction = Number(document.forms["frm1"]["yourPrediction"].value);
 
-  if (age < 1)
+  if (age < 18)
   {
     document.getElementById("InputRange").innerHTML = 'Age must be greater than or equal to 1'.bold();
     document.getElementById("NNprediction").style.display="none";
@@ -32,7 +32,7 @@ function makePrediction(){
     document.getElementById("chartContainer").style.display="none";
   }
 
-  else if (ldl < 1)
+  else if (ldl < 2)
   {
     document.getElementById("InputRange").innerHTML = 'LDL must be greater than or equal to 1'.bold();
     document.getElementById("NNprediction").style.display="none";
@@ -48,7 +48,7 @@ function makePrediction(){
     document.getElementById("chartContainer").style.display="none";
   }
 
-  else if (hdl < 1)
+  else if (hdl < 0.3)
   {
     document.getElementById("InputRange").innerHTML = 'HDL must be greater than or equal to 1'.bold();
     document.getElementById("NNprediction").style.display="none";
@@ -56,7 +56,7 @@ function makePrediction(){
     document.getElementById("chartContainer").style.display="none";
   }
 
-  else if (hdl > 5)
+  else if (hdl > 3.2)
   {
     document.getElementById("InputRange").innerHTML = 'HDL must be less than or equal to 5'.bold();
     document.getElementById("NNprediction").style.display="none";
@@ -64,7 +64,7 @@ function makePrediction(){
     document.getElementById("chartContainer").style.display="none";
   }
 
-  else if (tg < 1)
+  else if (tg < 0.3)
   {
     document.getElementById("InputRange").innerHTML = 'TG must be greater than or equal to 1'.bold();
     document.getElementById("NNprediction").style.display="none";
@@ -72,7 +72,7 @@ function makePrediction(){
     document.getElementById("chartContainer").style.display="none";
   }
 
-  else if (tg > 10)
+  else if (tg > 9)
   {
     document.getElementById("InputRange").innerHTML = 'TG must be less than or equal to 10'.bold();
     document.getElementById("NNprediction").style.display="none";
