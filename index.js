@@ -26,6 +26,7 @@ function makePrediction(){
     document.getElementById("InputRange").innerHTML = 'Age must be less than or equal to 80'.bold();
     document.getElementById("InputRange").innerHTML.style.color = red;
     document.getElementById("NNprediction").innerHTML = ' ';
+    document.getElementById("GeneticTesting").innerHTML = ' ';
   }
 
   else if (ldl < 1)
@@ -183,7 +184,7 @@ function makePrediction(){
 
 
 
-
+      /*
       // Classification tree
       const x = 1;
       const y = 1;
@@ -216,11 +217,11 @@ function makePrediction(){
       {
         CTprediction = 1;
       }
-      /*
+  
       document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: ' + CTprediction;
-      */
+  
 
-      document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: Not available';
+      document.getElementById("CTprediction").innerHTML = 'Classification tree prediction: Not available'; */
 
 
 
