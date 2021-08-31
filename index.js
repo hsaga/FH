@@ -206,8 +206,8 @@ function makePrediction(){
       });
 
       chart.render();
-      document.getElementById("chartContainer").style="height: 100px; width: 60%;" /*.style.display="block"; */
-
+      document.getElementById("chartContainer").style.height = "100px"; 
+      document.getElementById("chartContainer").style.width = "60px";
 
 
 
