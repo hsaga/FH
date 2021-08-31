@@ -19,6 +19,9 @@ function makePrediction(){
   if (age < 1)
   {
     document.getElementById("InputRange").innerHTML = 'Age must be greater than or equal to 1'.bold();
+    document.getElementById("NNprediction").style.display="none";
+    document.getElementById("GeneticTesting").style.display="none";
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else if (age > 80)
@@ -32,36 +35,54 @@ function makePrediction(){
   else if (ldl < 1)
   {
     document.getElementById("InputRange").innerHTML = 'LDL must be greater than or equal to 1'.bold();
+    document.getElementById("NNprediction").style.display="none";
+    document.getElementById("GeneticTesting").style.display="none";
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else if (ldl > 14)
   {
     document.getElementById("InputRange").innerHTML = 'LDL must be less than or equal to 14'.bold();
+    document.getElementById("NNprediction").style.display="none";
+    document.getElementById("GeneticTesting").style.display="none";
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else if (hdl < 1)
   {
     document.getElementById("InputRange").innerHTML = 'HDL must be greater than or equal to 1'.bold();
+    document.getElementById("NNprediction").style.display="none";
+    document.getElementById("GeneticTesting").style.display="none";
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else if (hdl > 5)
   {
     document.getElementById("InputRange").innerHTML = 'HDL must be less than or equal to 5'.bold();
+    document.getElementById("NNprediction").style.display="none";
+    document.getElementById("GeneticTesting").style.display="none";
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else if (tg < 1)
   {
     document.getElementById("InputRange").innerHTML = 'TG must be greater than or equal to 1'.bold();
+    document.getElementById("NNprediction").style.display="none";
+    document.getElementById("GeneticTesting").style.display="none";
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else if (tg > 10)
   {
     document.getElementById("InputRange").innerHTML = 'TG must be less than or equal to 10'.bold();
+    document.getElementById("NNprediction").style.display="none";
+    document.getElementById("GeneticTesting").style.display="none";
+    document.getElementById("chartContainer").style.display="none";
   }
 
   else
   {
-    document.getElementById("InputRange").innerHTML = '';
+    /* document.getElementById("InputRange").innerHTML = ''; */
 
     console.log(yourPrediction);
 
