@@ -158,6 +158,7 @@ function makePrediction(){
       {
         var col = "red";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: Yes'.bold();
+        document.getElementById("GeneticTesting").style.display="initial";
       }
 
       console.log(col)
