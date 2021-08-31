@@ -25,6 +25,7 @@ function makePrediction(){
   {
     document.getElementById("InputRange").innerHTML = 'Age must be less than or equal to 80'.bold();
     document.getElementById("InputRange").innerHTML.style.color = red;
+    document.getElementById("NNprediction").innerHTML = ' ';
   }
 
   else if (ldl < 1)
