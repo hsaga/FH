@@ -201,7 +201,7 @@ function makePrediction(){
       });
 
       chart.render();
-      document.getElementById("chartContainer").style.display="inline";
+      document.getElementById("chartContainer").style.display="compact";
 
 
 
