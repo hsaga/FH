@@ -139,7 +139,7 @@ function makePrediction(){
      
 
 
-      if (meanPrediction >= 0 && meanPrediction < 0.25)
+      if (meanPrediction >= 0 && meanPrediction < 0.3)
       {
         var col = "green";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
@@ -154,7 +154,7 @@ function makePrediction(){
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: No'.bold();
       }
       */
-      else if (meanPrediction >= 0.25 && meanPrediction <=1)
+      else if (meanPrediction >= 0.3 && meanPrediction <=1)
       {
         var col = "red";
         document.getElementById("GeneticTesting").innerHTML = 'Send to genetic testing: Yes'.bold();
